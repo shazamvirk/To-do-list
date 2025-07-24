@@ -1,2 +1,119 @@
-*{
-}
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(145deg, #bbf6f8, #894c91);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .todo-app {
+      max-width: 540px;
+      background: #fff;
+      margin: 50px auto;
+      padding: 40px 30px 30px;
+      border-radius: 12px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #e2d3d3;
+      border-radius: 25px;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+    .row input {
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 10px;
+      background: transparent;
+      font-size: 16px;
+    }
+
+    .row button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #e96e09;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .row button:hover {
+      background: #d75d00;
+    }
+
+    ul li {
+      font-size: 17px;
+      padding: 12px 8px 12px 40px;
+      position: relative;
+      user-select: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    ul li::before {
+      content: "";
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0t2T7eJnfyBwtIBXUYBatHzbXqRDgLDzzyw&usqp=CAU');
+      background-size: cover;
+      background-position: center;
+      top: 15px;
+      left: 10px;
+    }
+
+    ul li.checked {
+      color: #aaa;
+      text-decoration: line-through;
+    }
+
+    ul li.checked::before {
+      background-image: url('https://static.vecteezy.com/system/resources/previews/011/858/556/non_2x/green-check-mark-icon-with-circle-tick-box-check-list-circle-frame-checkbox-symbol-sign-png.png');
+    }
+
+    ul li span {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      width: 20px;
+      height: 20px;
+      background: #f44336;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      cursor: pointer;
+    }
+
+    ul li span:hover {
+      background: #d32f2f;
+    }
